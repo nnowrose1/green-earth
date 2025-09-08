@@ -55,17 +55,35 @@ const displayAllPlants = (allPlants) => {
 // allPlants.forEach(eachPlant => {
     
     // console.log(eachPlant);
+     allPlants.forEach(eachPlant => {
+     const div = document.createElement("div");
+    div.innerHTML = `
+     <div class="tree-card p-4 rounded-lg bg-white container">
+                <div class="w-[280px] h-[186px]">
+                <img class="rounded-md h-full w-full" src="${eachPlant.image}" alt="">
+                </div>
+                <button onclick="loadPlantDetail(${eachPlant.id})" class=" font-semibold text-[14px] hover:font-bold text-[#18181B] mt-3">${eachPlant.name}</button>
+                <p class="my-2 text-[12px] text-[#71717A]">${eachPlant.description}</p>
+                <div class="flex items-center justify-between">
+                    <p class="bg-[#DCFCE7] py-1 px-3 rounded-full text-[#15803D] font-medium text-[14px]">${eachPlant.category}</p>
+                    <span class="font-semibold text-[14px] text-[#1F2937]">${eachPlant.price}</span>
+                </div>
+                <button id="${eachPlant.id}" class="cart-btn btn rounded-full py-3 w-full font-medium text-white bg-[#15803D] mt-6">Add to Cart</button>
+            </div>
+    `;
+    allPlantsContainer.appendChild(div);
+    });
+
     allPlantsButton.addEventListener('click', () => {
        spinner(true);
-    allPlantsContainer.innerHTML = " ";
+     allPlantsContainer.innerHTML = " ";
     allPlants.forEach(eachPlant => {
     allPlantsButton.classList.add("active");
      const activeButtons = document.getElementsByClassName("active-button");
      for(const activeButton of activeButtons){
         activeButton.classList.remove("active");
     }
-
-    const div = document.createElement("div");
+     const div = document.createElement("div");
     div.innerHTML = `
      <div class="tree-card p-4 rounded-lg bg-white container">
                 <div class="w-[280px] h-[186px]">
@@ -84,7 +102,7 @@ const displayAllPlants = (allPlants) => {
      })
      spinner(false);
 })
- 
+
 }
 loadAllPlants();
 
