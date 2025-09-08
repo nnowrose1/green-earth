@@ -59,7 +59,7 @@ const displayAllPlants = (allPlants) => {
      const div = document.createElement("div");
     div.innerHTML = `
      <div class="tree-card p-4 rounded-lg bg-white container">
-                <div class="w-[280px] h-[186px]">
+                <div class="w-full h-[200px]">
                 <img class="rounded-md h-full w-full" src="${eachPlant.image}" alt="">
                 </div>
                 <button onclick="loadPlantDetail(${eachPlant.id})" class=" font-semibold text-[14px] hover:font-bold text-[#18181B] mt-3">${eachPlant.name}</button>
