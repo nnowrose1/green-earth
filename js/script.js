@@ -87,7 +87,7 @@ const displayAllPlants = (allPlants) => {
     div.innerHTML = `
      <div class="tree-card p-4 rounded-lg bg-white container">
     
-                <div class = "w-[280px] h-[186px]">
+                <div class = "w-full h-[200px]">
                 <img class="rounded-md h-full w-full" src="${eachPlant.image}" alt="">
                 </div>
                 <button onclick="loadPlantDetail(${eachPlant.id})" class=" font-semibold text-[14px] hover:font-bold text-[#18181B] mt-3">${eachPlant.name}</button>
@@ -137,7 +137,7 @@ const displayPlantsByCategories = (category) =>{
         const div = document.createElement("div");
         div.innerHTML = `
      <div class="tree-card p-4 rounded-lg bg-white container">
-                <div class = "w-[280px] h-[186px]">
+                <div class = "w-full h-[200px]">
                 <img class="rounded-md h-full w-full" src="${plants.image}" alt="">
                 </div>
                 <h4 onclick="loadPlantDetail(${plants.id})" class="font-semibold hover:font-bold text-[14px] text-[#18181B] mt-3">${plants.name}</h4>
@@ -197,7 +197,7 @@ mainContainer.addEventListener('click', (e) => {
         const id = e.target.parentNode.children[4].id;
         // console.log(id);
          sum = sum + price;
-      
+      let num = 1;
         
         //  console.log(sum);  
          const div = document.createElement("div");
