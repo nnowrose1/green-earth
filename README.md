@@ -14,35 +14,58 @@ filter() also access all the elements of an array and then filters the elements 
 Arrow functions are a precise method of function declaration, that has been introduced in ES6. We can omit function keyword and even return keyword while declaring a single line arrow function. However, return keyword is needed for multi line arrow functions.
 Example of arrow function:
 const sum = (a,b) => a+b; //single line arrow function
+<br>
 const oper = (a,b) => {
+        <br>
         const sum = a+b;
+        <br>
         const subtract = a-b;
+        <br>
         return sum * subtract;
+        <br>
 } //multi-line arrow function
+<br>
 one key difference of arrow functions compared to normal functions is arrow functions do not have their own "this".
 
 #### 4) How does destructuring assignment work in ES6?
 If we want to assign array elements /object properties to certain variables, destructuring method makes it very handy. For example,
+<br>
 const numbers = [5, 10, 15];
+<br>
 const [first, second] = numbers;//array destructuring
+<br>
 console.log(first);  //o/p 5
+<br>
 console.log(second);  //o/p 10
+<br>
 
-const person = {name: "Rahim", age: 30, address: "Pabna"}
+const person = {name: "Rahim", age: 30, address: "Pabna"};
+<br>
 const {name, address} = person;
+<br>
 console.log(name); //o/p Rahim
+<br>
 console.log(address); //o/p Pabna
+<br>
 In general, variables name and key names should be same. But if we want to change the variable name, that can also be done.
+<br>
 const {age:hisAge} = person;
+<br>
 console.log(hisAge); //o/p 30
+<br>
 
 #### 5) Explain template literals in ES6. How are they different from string concatenation?
 Generally, we define strings using single or double quotation. When we define strings using backticks, they are called template literals. They are a modern method of defining strings and they offer enhanced functionalities in comparison to string concatenation.
 We normally use comma or plus sign or .concat() method for string concatenation. For example,
+<br>
 const name = "Rahim";
+<br>
 const age = 30;
+<br>
 console.log("Hello" + name + "! Are you" + age + "years old?");
+<br>
 //o/p Hello Rahim! Are you 30 years old? 
+<br>
 When we concatenate strings like this, it becomes very clumsy while reading it. If we use template literals, 
 console.log(`Hello ${name}! Are you ${age} years old?`);
 //o/p Hello Rahim! Are you 30 years old? 
