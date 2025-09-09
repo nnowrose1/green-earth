@@ -59,13 +59,13 @@ const displayAllPlants = (allPlants) => {
      const div = document.createElement("div");
     div.innerHTML = `
      <div class="tree-card p-4 rounded-lg bg-white container">
-                <div class="w-full h-[200px]">
+                <div class="w-full h-[200px] object-cover">
                 <img class="rounded-md h-full w-full" src="${eachPlant.image}" alt="">
                 </div>
                 <button onclick="loadPlantDetail(${eachPlant.id})" class=" font-semibold text-[14px] hover:font-bold text-[#18181B] mt-3">${eachPlant.name}</button>
                 <p class="my-2 text-[12px] text-[#71717A] line-clamp-3">${eachPlant.description}</p>
                 <div class="flex items-center justify-between">
-                    <p class="bg-[#DCFCE7] py-1 px-3 rounded-full text-[#15803D] font-medium text-[14px]">${eachPlant.category}</p>
+                    <p class="bg-[#DCFCE7] py-1 px-2 rounded-full text-[#15803D] text-[14px]">${eachPlant.category}</p>
                     <span class="font-semibold text-[14px] text-[#1F2937]">${eachPlant.price}</span>
                 </div>
                 <button id="${eachPlant.id}" class="cart-btn btn rounded-full py-3 w-full font-medium text-white bg-[#15803D] mt-6">Add to Cart</button>
@@ -89,13 +89,13 @@ const displayAllPlants = (allPlants) => {
     div.innerHTML = `
      <div class="tree-card p-4 rounded-lg bg-white container">
     
-                <div class = "w-full h-[200px]">
+                <div class = "w-full h-[200px] object-cover">
                 <img class="rounded-md h-full w-full" src="${eachPlant.image}" alt="">
                 </div>
                 <button onclick="loadPlantDetail(${eachPlant.id})" class=" font-semibold text-[14px] hover:font-bold text-[#18181B] mt-3">${eachPlant.name}</button>
                 <p class="my-2 text-[12px] text-[#71717A] line-clamp-3">${eachPlant.description}</p>
                 <div class="flex items-center justify-between">
-                    <p class="bg-[#DCFCE7] py-1 px-3 rounded-full text-[#15803D] font-medium text-[14px]">${eachPlant.category}</p>
+                    <p class="bg-[#DCFCE7] py-1 px-2 rounded-full text-[#15803D] text-[14px]">${eachPlant.category}</p>
                     <span class="font-semibold text-[14px] text-[#1F2937]">${eachPlant.price}</span>
                 </div>
                 <button id="${eachPlant.id}" class="cart-btn btn rounded-full py-3 w-full font-medium text-white bg-[#15803D] mt-6">Add to Cart</button>
@@ -139,13 +139,13 @@ const displayPlantsByCategories = (category) =>{
         const div = document.createElement("div");
         div.innerHTML = `
      <div class="tree-card p-4 rounded-lg bg-white container">
-                <div class = "w-full h-[200px]">
+                <div class = "w-full h-[200px] object-cover">
                 <img class="rounded-md h-full w-full" src="${plants.image}" alt="">
                 </div>
                 <h4 onclick="loadPlantDetail(${plants.id})" class="font-semibold hover:font-bold text-[14px] text-[#18181B] mt-3">${plants.name}</h4>
                 <p class="my-2 text-[12px] text-[#71717A] line-clamp-3">${plants.description}</p>
                 <div class="flex items-center justify-between">
-                    <p class="bg-[#DCFCE7] py-1 px-3 rounded-full text-[#15803D] font-medium text-[14px]">${plants.category}</p>
+                    <p class="bg-[#DCFCE7] py-1 px-2 rounded-full text-[#15803D] text-[14px]">${plants.category}</p>
                     <span class="font-semibold text-[14px] text-[#1F2937]">${plants.price}</span>
                 </div>
                 <button class="btn rounded-full py-3 w-full font-medium text-white bg-[#15803D] mt-6">Add to Cart</button>
@@ -174,7 +174,7 @@ const showPlantDetails = (plant) => {
         <div class="w-full">
          <img class="rounded-md h-full w-full" src="${plant.image}" alt="">
          </div>
-         <p class="py-1 mt-3 text-[#1F2937] font-medium text-[14px]">Category: ${plant.category}</p>
+         <p class="py-1 mt-3 text-[#1F2937] text-[14px]">Category: ${plant.category}</p>
          <span class="font-semibold text-[14px] text-[#1F2937]">Price: ${plant.price}</span>  
         <p class="my-2 text-[12px] text-[#71717A]">Description: ${plant.description}</p> 
          </div>
@@ -205,7 +205,7 @@ mainContainer.addEventListener('click', (e) => {
         //  console.log(sum);  
          const div = document.createElement("div");
     div.innerHTML=`
-      <div class="max-w-[218px] rounded-lg bg-[#F0FDF4] flex items-center justify-between mb-2 py-2 px-3">
+      <div class="w-full lg:max-w-[218px] rounded-lg bg-[#F0FDF4] flex items-center justify-between mb-2 py-2 px-3">
                <div>
                 <h4 class="font-semibold text-[14px] text-[#1F2937]">${name}</h4>
                 <p class="text-[#1F293790] mt-1">${price}</p>
