@@ -67,6 +67,9 @@ console.log("Hello" + name + "! Are you" + age + "years old?");
 //o/p Hello Rahim! Are you 30 years old? 
 <br>
 When we concatenate strings like this, it becomes very clumsy while reading it. If we use template literals, 
+<br>
 console.log(`Hello ${name}! Are you ${age} years old?`);
+<br>
 //o/p Hello Rahim! Are you 30 years old? 
+<br>
 Template literals make it very precise and readable. Moreover, template literals support multi-line string without any new line expressions. Variables and any valid JS or mathematical expressions can be written inside ${}, thus make it easy creating dynamic strings.
