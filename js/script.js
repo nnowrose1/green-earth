@@ -41,7 +41,7 @@ const allPlantsContainer = document.getElementById("all-plants-container");
 const allPlantsButton = document.getElementById("all-plants");
 
 const loadAllPlants = () =>{
-     
+     spinner(true);
     fetch("https://openapi.programming-hero.com/api/plants")
     .then(response => response.json())
     .then(data => {
@@ -72,11 +72,13 @@ const displayAllPlants = (allPlants) => {
             </div>
     `;
     allPlantsContainer.appendChild(div);
+    spinner(false);
     });
 
     allPlantsButton.addEventListener('click', () => {
-       spinner(true);
+       
      allPlantsContainer.innerHTML = " ";
+     spinner(true);
     allPlants.forEach(eachPlant => {
     allPlantsButton.classList.add("active");
      const activeButtons = document.getElementsByClassName("active-button");
@@ -193,9 +195,10 @@ mainContainer.addEventListener('click', (e) => {
     let sum = Number(document.getElementById("total-price").innerText);
     if(e.target.innerText == "Add to Cart"){
         const name = e.target.parentNode.children[1].innerText;
+        alert(`${name} has successfully been added to your cart!`)
         let price = Number(e.target.parentNode.children[3].children[1].innerText);
         const id = e.target.parentNode.children[4].id;
-        // console.log(id);
+         console.log(id);
          sum = sum + price;
       let num = 1;
         

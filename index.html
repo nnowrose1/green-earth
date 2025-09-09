@@ -51,10 +51,7 @@
     <!-- Choose your trees section -->
      <section class="w-11/12 mx-auto pt-8 lg:pt-24">
      <h2 class="font-semibold text-3xl text-[#1F2937] text-center mb-5 lg:mb-10">Choose Your Trees</h2>
-            <!-- spinner -->
-          <section id="spinner" class="flex items-center justify-center pt-15 mx-auto w-full lg:max-w-[1090px] hidden">
-           <span class="loading loading-dots loading-xl"></span>
-          </section>
+
      <section id="main-container" class=" flex flex-col lg:flex-row gap-[30px]">
         <!-- left-section -->
         <div class="left-container flex-1 w-full lg:max-w-[250px]">
@@ -66,8 +63,13 @@
 
         </div>
         <!-- middle-section -->
+             <!-- spinner -->
+          <section id="spinner" class="flex items-center justify-center pt-15 mx-auto w-full lg:max-w-[1090px] hidden">
+           <span class="loading loading-dots loading-xl"></span>
+          </section>
 
         <div id="all-plants-container" class="middle-container flex-1 w-full lg:max-w-[1090px] grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
+            
             <!-- tree card -->
              <!--   w-[280px] h-[186px] -->
             <!-- <div class="tree-card p-4 rounded-lg bg-white"> 
@@ -163,9 +165,9 @@
          <br>
         <select class="select select-md w-full">
   <option selected>Number of Trees</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
+  <option>1 tree - $5</option>
+  <option>5 trees - $25</option>
+  <option>10 trees - $50</option>
 </select>
         <button class="btn text-[#15803D] w-full font-medium py-3 rounded-full bg-[#FACC15] mt-5 border-none">Donate Now</button>
     </div>
